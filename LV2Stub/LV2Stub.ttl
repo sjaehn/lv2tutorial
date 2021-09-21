@@ -1,0 +1,136 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lv2:  <http://lv2plug.in/ns/lv2core#> .
+@prefix atom: <http://lv2plug.in/ns/ext/atom#> .
+#@prefix urid: <http://lv2plug.in/ns/ext/urid#> .
+#@prefix time: <http://lv2plug.in/ns/ext/time#> .
+#@prefix midi: <http://lv2plug.in/ns/ext/midi#> .
+#@prefix state: <http://lv2plug.in/ns/ext/state#> .
+#@prefix work:  <http://lv2plug.in/ns/ext/worker#> .
+#@prefix rsz: <http://lv2plug.in/ns/ext/resize-port#> .
+@prefix ui: <http://lv2plug.in/ns/extensions/ui#> .
+
+
+<https://www.your-url.com/maintainer>
+	a foaf:Person;
+	foaf:name "";			                        # Author name
+#	foaf:mbox <>;			                        # Author e-mail address
+#	foaf:homepage <> . 		                        # Author homepage
+
+<https://www.your-url.com/LV2Stub#gui>
+	a ui:X11UI;                                             # Or another UI type. Omit Qt / GTK. Also see https://lv2plug.in/ns/extensions/ui
+	ui:binary <LV2Stub_GUI.so> ;
+	lv2:extensionData ui:idleInterface ;                    # Required feature for calling X11 UIs.
+#       lv2:extensionData ui:resize ;                           # Optional feature for resizable UIs.
+#	lv2:optionalFeature ui:resize ;                         # Optional feature for resizable UIs.
+	lv2:requiredFeature ui:idleInterface .                  # Required feature for calling X11 UIs.
+
+<https://www.your-url.com/LV2Stub>
+        a lv2:Plugin, doap:Project;	                        # Also add the plugin type, e. g., lv2:FilterPlugin. Also see https://lv2plug.in/ns/lv2core
+        doap:name "LV2Stub" ;		                        # Plugin name
+        rdfs:comment "Plugin stub" ;	                        # Plugin description
+	doap:maintainer <https://www.your-url.com/maintainer> ; # Plugin maintainer
+	doap:license <http://usefulinc.com/doap/licenses/gpl> ; # Or another license
+	lv2:microVersion 1 ;                                    # For numbering see https://lv2plug.in/ns/lv2core
+	lv2:minorVersion 0 ;                                    # For numbering see https://lv2plug.in/ns/lv2core
+        lv2:optionalFeature lv2:hardRTCapable ;                 # For real-time plugins
+        lv2:binary <LV2Stub.so> ;
+#	lv2:requiredFeature urid:map ;                          # Only needed if features are transmitted to the plugin and / or if atoms are used
+#       lv2:requiredFeature work:schedule ;                     # Only needed if worker is used
+#	lv2:extensionData state:interface;                      # Only needed if additional data are stored in the plugin state
+#	lv2:extensionData work:interface;                       # Only needed if worker is used
+	ui:ui <https://www.your-url.com/LV2Stub#gui> ;
+	
+#	Plugin ports section
+#	
+#	Select the ports required for the plugin and adapt them to your needs.
+#	Keep increasing numbers for lv2:index starting by 0.
+
+	lv2:port
+        
+#	Example for an atom message input port.
+#	This port type is used for host / gui to dsp communication via atoms.
+        [
+                a lv2:InputPort , atom:AtomPort ;
+                lv2:designation lv2:control;
+                atom:bufferType atom:Sequence ;
+#               atom:supports time:Position ;
+#               atom:supports midi:MidiEvent ;
+                lv2:index 0 ;
+                lv2:symbol "control" ;
+                lv2:name "Control" ;
+        ] , 
+        
+#	Example for an atom message output port.
+#	This port type is used for dsp to host / gui communication via atoms.
+        [
+                a lv2:OutputPort , atom:AtomPort ;
+                atom:bufferType atom:Sequence ;
+                lv2:index 1 ;
+                lv2:symbol "notify" ;
+                lv2:name "Notify" ;
+#               rsz:minimumSize 65536;
+        ] ,
+        
+        
+#	Example for an audio input port.
+        [
+                a lv2:AudioPort , lv2:InputPort ;
+                lv2:index 2 ;
+                lv2:symbol "audio_in" ;
+                lv2:name "Audio in" ;
+        ] , 
+        
+#	Example for an audio output port.
+        [
+                a lv2:AudioPort , lv2:OutputPort ;
+                lv2:index 3 ;
+                lv2:symbol "audio_out" ;
+                lv2:name "Audio Out" ;
+        ] ,
+        
+#	Example for a simple control (input) port.
+#	This type is used for the control of plugin variables via dials and sliders.
+        [
+                a lv2:InputPort , lv2:ControlPort ;
+                lv2:index 4 ;
+                lv2:symbol "value_control" ;
+                lv2:name "Value control" ;
+		lv2:default 0.5 ;
+                lv2:minimum 0.0 ;
+                lv2:maximum 1.0 ;
+                rdfs:comment "Optional comment";
+        ] ,
+        
+#	Example for a toggle control (input) port.
+#	This type is used for the control of plugin variables via on / off switches.      
+        [
+                a lv2:InputPort , lv2:ControlPort ;
+                lv2:index 5 ;
+                lv2:symbol "toggle_control" ;
+                lv2:name "Toggle control" ;
+                lv2:portProperty lv2:toggled;
+		lv2:default 0 ;
+                lv2:minimum 0 ;
+                lv2:maximum 1 ;
+                rdfs:comment "Optional comment";
+        ] ,
+        
+#	Example for a enum control (input) port.
+#	This type is used for the control of plugin variables with different pre-defined states.      
+        [
+                a lv2:InputPort , lv2:ControlPort ;
+                lv2:index 6 ;
+                lv2:symbol "enum_control" ;
+                lv2:name "Enum control" ;
+		lv2:portProperty lv2:integer, lv2:enumeration ;
+		lv2:scalePoint [ rdfs:label "Option 1"; rdf:value 1 ] ;
+		lv2:scalePoint [ rdfs:label "Option 2"; rdf:value 2 ] ;
+		lv2:scalePoint [ rdfs:label "Option 3"; rdf:value 3 ] ;
+                lv2:default 1 ;
+                lv2:minimum 1 ;
+                lv2:maximum 3 ;
+                rdfs:comment "Optional comment";
+        ] .
