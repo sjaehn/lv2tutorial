@@ -212,7 +212,7 @@ static void deactivate (LV2_Handle instance)
 	if (inst) inst->deactivate ();
 }
 
-/*static LV2_State_Status state_save(LV2_Handle instance, LV2_State_Store_Function store, LV2_State_Handle handle, uint32_t flags,
+/*static LV2_State_Status state_save (LV2_Handle instance, LV2_State_Store_Function store, LV2_State_Handle handle, uint32_t flags,
            const LV2_Feature* const* features)
 {
 	LV2Plugin* inst = (LV2Plugin*)instance;
@@ -221,7 +221,7 @@ static void deactivate (LV2_Handle instance)
 	return inst->state_save (store, handle, flags, features);
 }*/
 
-/*static LV2_State_Status state_restore(LV2_Handle instance, LV2_State_Retrieve_Function retrieve, LV2_State_Handle handle, uint32_t flags,
+/*static LV2_State_Status state_restore (LV2_Handle instance, LV2_State_Retrieve_Function retrieve, LV2_State_Handle handle, uint32_t flags,
            const LV2_Feature* const* features)
 {
 	LV2Plugin* inst = (LV2Plugin*)instance;
@@ -261,7 +261,7 @@ static void cleanup (LV2_Handle instance)
 	if (inst) delete inst;
 }
 
-static const void* extension_data(const char* uri)
+static const void* extension_data (const char* uri)
 {
 	// State
 	//static const LV2_State_Interface state  = {state_save, state_restore};

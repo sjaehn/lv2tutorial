@@ -32,8 +32,14 @@ sudo apt-get install pkg-config lv2-dev libsndfile1-dev libx11-dev libcairo2-dev
 And on Arch linux-based systems you can get them by calling from the terminal:
 ```
 sudo pacman -S base-devel
-sudo apt-get install pkg-config lv2 libsndfile libX11-dev cairo
+sudo pacman -S pkg-config lv2 libsndfile libX11-dev cairo
 ```
+
+Recommended optional tools:
+* Jalv (minimal LV2 host)
+* lv2lint (validation)
+* gdb (debugger)
+* valgrind (memory debugging / leak detection)
 
 
 ## Resources
