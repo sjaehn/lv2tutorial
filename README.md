@@ -5,6 +5,8 @@ Programming tutorial series for creating LV2 plugins using C/C++ and turtle.
 
 ## 01 - Introduction: What is LV2?
 
+See video: https://www.youtube.com/watch?v=AdB2pLCFQY4
+
 LV2 is a free and open source audio plugin standard. LV2 is available on Linux, Mac, Windows, and on other systems.
 There are more than 1000 LV2 plugins available by now. And the number is growing.
 
