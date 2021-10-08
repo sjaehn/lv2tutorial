@@ -3,6 +3,18 @@
 Programming tutorial series for creating LV2 plugins using C/C++ and turtle.
 
 
+## Content
+
+* [00 - Announce](#00---announce)
+* [01 - Introduction: What is LV2? - And what do I need for plugin programming?](#01---introduction-what-is-lv2)
+* [02 - A simple amplifier (part 1) - Do the turtle](#02---a-simple-amplifier-part-1---do-the-turtle)
+
+
+## 00 - Announce
+
+See video: https://www.youtube.com/watch?v=51eHCA4oCEI
+
+
 ## 01 - Introduction: What is LV2?
 
 See video: https://www.youtube.com/watch?v=AdB2pLCFQY4
@@ -42,6 +54,18 @@ Recommended optional tools:
 * lv2lint (validation)
 * gdb (debugger)
 * valgrind (memory debugging / leak detection)
+
+
+## 02 - A Simple Amplifier (Part 1) - Do The Turtle
+
+See video: once established
+
+Introduction into the basic principles of the turtle description language. Subject,
+predicate, and object. And URIs. Define the metadata for a simple amplifier plugin.
+
+* [usefulinc.ttl](https://github.com/sjaehn/lv2tutorial/blob/master/usefulinc.ttl)
+* [LV2](https://lv2plug.in/ns/)
+* [RDF](https://www.w3.org/TR/turtle/)
 
 
 ## Resources
