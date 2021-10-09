@@ -58,9 +58,9 @@ Recommended optional tools:
 
 ## 02 - A Simple Amplifier (Part 1) - Do The Turtle
 
-See video: once established
+See video: https://www.youtube.com/watch?v=aKN89LnmbvQ
 
-Introduction into the basic principles of the turtle description language. Subject,
+Introduction to the basic principles of the Turtle description language. Subject,
 predicate, and object. And URIs. Define the metadata for a simple amplifier plugin.
 
 * [usefulinc.ttl](https://github.com/sjaehn/lv2tutorial/blob/master/usefulinc.ttl)
