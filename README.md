@@ -51,7 +51,7 @@ sudo pacman -S pkg-config lv2 libsndfile libX11-dev cairo
 
 Recommended optional tools:
 * Jalv (minimal LV2 host)
-* lv2lint (validation)
+* [lv2lint](https://github.com/OpenMusicKontrollers/lv2lint) (validation)
 * gdb (debugger)
 * valgrind (memory debugging / leak detection)
 
