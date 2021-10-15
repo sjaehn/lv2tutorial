@@ -71,7 +71,7 @@ predicate, and object. And URIs. Define the metadata for a simple amplifier plug
 
 ## 03 - How LV2 Plugins Work
 
-See video: once established
+See video: https://www.youtube.com/watch?v=Zg-YUbfO6ww
 
 This videos provides a look under the hood of an LV2 plugin and shows how it works
 inside a DAW. The plugin has to provide:
