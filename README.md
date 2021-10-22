@@ -9,7 +9,7 @@ Programming tutorial series for creating LV2 plugins using C/C++ and turtle.
 * [01 - Introduction: What is LV2? - And what do I need for plugin programming?](#01---introduction-what-is-lv2)
 * [02 - A simple amplifier (part 1) - Do the turtle](#02---a-simple-amplifier-part-1---do-the-turtle)
 * [03 - How LV2 plugins work](#03---how-lv2-plugins-work)
-* 04 - A simple amplifier plugin (part 2) - Code, compile & run
+* {04 - A simple amplifier plugin (part 2) - Code, compile & run](#04---a-simple-amplifier-plugin-part-2---code-compile--run)
 
 
 ## 00 - Announce
