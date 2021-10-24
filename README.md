@@ -9,7 +9,7 @@ Programming tutorial series for creating LV2 plugins using C/C++ and turtle.
 * [01 - Introduction: What is LV2? - And what do I need for plugin programming?](#01---introduction-what-is-lv2)
 * [02 - A simple amplifier (part 1) - Do the turtle](#02---a-simple-amplifier-part-1---do-the-turtle)
 * [03 - How LV2 plugins work](#03---how-lv2-plugins-work)
-* {04 - A simple amplifier plugin (part 2) - Code, compile & run](#04---a-simple-amplifier-plugin-part-2---code-compile--run)
+* [04 - A simple amplifier plugin (part 2) - Code, compile & run](#04---a-simple-amplifier-plugin-part-2---code-compile--run)
 
 
 ## 00 - Announce
@@ -119,14 +119,14 @@ Compile the code from the code directory with:
 gcc -fvisibility=hidden -fPIC -Wl,-Bstatic -Wl,-Bdynamic -Wl,--as-needed -shared -pthread `pkg-config --cflags lv2` -lm `pkg-config --libs lv2` myAmp.c -o myAmp.so
 ```
 
-Copy the resulting .so file and the two .ttl files into a new created subfolder (I call this folder myAmp.lv2)
-in one of your systems LV2 folders. Like the hidden LV2 folder of your home directory: ~/.lv2.
+Copy the resulting .so file and the two .ttl files into a newly created subfolder (I call this folder `myAmp.lv2/`)
+in one of your systems LV2 folders. Like the hidden LV2 folder of your home directory: `~/.lv2/`.
 
-Then you can test the plugin in an LV2 host, like the minimalistic jalv:
+Then you can test the plugin in an LV2 host, like the minimalistic [jalv](https://gitlab.com/drobilla/jalv):
 ```
 jalv.gtk3 https://github.com/sjaehn/lv2tutorial/myAmp
 ```
-(gtk3 may be replaced by one of the other jalv veriants). Or feel free to directly test myAmp within a DAW.
+(gtk3 may be replaced by one of the other jalv variants). Or feel free to directly test myAmp within a DAW.
 
 Now we completed our first LV2 plugin!
 
