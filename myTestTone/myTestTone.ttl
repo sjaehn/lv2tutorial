@@ -1,0 +1,45 @@
+@prefix lv2:  <http://lv2plug.in/ns/lv2core#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix units: <http://lv2plug.in/ns/extensions/units#> .
+@prefix pprops: <http://lv2plug.in/ns/ext/port-props#> .
+
+
+<https://github.com/sjaehn/lv2tutorial/myTestTone> a lv2:Plugin , lv2:OscillatorPlugin , doap:Project ;
+    lv2:binary <myTestTone.so> ;
+    doap:name "myTestTone" ;
+    lv2:optionalFeature lv2:hardRTCapable ;
+    lv2:minorVersion 2 ;
+    lv2:microVersion 0 ;
+
+    
+    lv2:port 
+        [
+            a lv2:OutputPort , lv2:AudioPort ;
+            lv2:index 0 ;
+            lv2:symbol "audio_out" ;
+            lv2:name "Audio output" ;
+        ] ,
+
+        [
+            a lv2:InputPort , lv2:ControlPort ;
+            lv2:index 1 ;
+            lv2:symbol "freq" ;
+            lv2:name "Frequency" ;
+            lv2:default 440.0 ;
+            lv2:minimum 20.0 ;
+            lv2:maximum 20000.0 ;
+            units:unit   units:hz ;
+            lv2:portProperty pprops:logarithmic ;
+        ] ,
+        
+        [
+            a lv2:InputPort , lv2:ControlPort ;
+            lv2:index 2 ;
+            lv2:symbol "level" ;
+            lv2:name "Level" ;
+            lv2:default 0.1 ;
+            lv2:minimum 0.0 ;
+            lv2:maximum 1.0 ;
+        ] .

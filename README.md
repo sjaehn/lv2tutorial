@@ -10,6 +10,7 @@ Programming tutorial series for creating LV2 plugins using C/C++ and turtle.
 * [02 - A simple amplifier (part 1) - Do the turtle](#02---a-simple-amplifier-part-1---do-the-turtle)
 * [03 - How LV2 plugins work](#03---how-lv2-plugins-work)
 * [04 - A simple amplifier plugin (part 2) - Code, compile & run](#04---a-simple-amplifier-plugin-part-2---code-compile--run)
+* 05 - A sound generator in C++
 
 
 ## 00 - Announce
@@ -129,6 +130,18 @@ jalv.gtk3 https://github.com/sjaehn/lv2tutorial/myAmp
 (gtk3 may be replaced by one of the other jalv variants). Or feel free to directly test myAmp within a DAW.
 
 Now we completed our first LV2 plugin!
+
+
+## 05 - A Sound Generator In C++
+
+See video: once established
+
+Programming a test tone generator as a first step to make a software synthesizer. 
+
+Topics:
+* Introduction in classic C++.
+* LV2 extensions: Units, Port Properties
+* Writing a sine wave to the audio output
 
 
 ## Resources
