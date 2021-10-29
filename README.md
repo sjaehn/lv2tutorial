@@ -10,7 +10,7 @@ Programming tutorial series for creating LV2 plugins using C/C++ and turtle.
 * [02 - A simple amplifier (part 1) - Do the turtle](#02---a-simple-amplifier-part-1---do-the-turtle)
 * [03 - How LV2 plugins work](#03---how-lv2-plugins-work)
 * [04 - A simple amplifier plugin (part 2) - Code, compile & run](#04---a-simple-amplifier-plugin-part-2---code-compile--run)
-* 05 - A sound generator in C++
+* [05 - A sound generator in C++](#05---a-sound-generator-in-c)
 
 
 ## 00 - Announce
@@ -134,7 +134,7 @@ Now we completed our first LV2 plugin!
 
 ## 05 - A Sound Generator In C++
 
-See video: once established
+See video: https://youtu.be/uvskHCJrJcY
 
 Programming a test tone generator as a first step to make a software synthesizer. 
 
