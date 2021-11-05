@@ -11,6 +11,7 @@ Programming tutorial series for creating LV2 plugins using C/C++ and turtle.
 * [03 - How LV2 plugins work](#03---how-lv2-plugins-work)
 * [04 - A simple amplifier plugin (part 2) - Code, compile & run](#04---a-simple-amplifier-plugin-part-2---code-compile--run)
 * [05 - A sound generator in C++](#05---a-sound-generator-in-c)
+* [06 - Atoms, URIDs & URIs](#06---atom-urids--uris)
 
 
 ## 00 - Announce
@@ -146,7 +147,7 @@ Topics:
 
 ## 06 - Atom, URIDs & URIs
 
-See video: once established
+See video: https://youtu.be/EHpwO5yl66s
 
 Introduction into the data structures used in LV2: Atoms, URIDs and URIs.
 
