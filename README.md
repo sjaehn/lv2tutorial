@@ -12,6 +12,7 @@ Programming tutorial series for creating LV2 plugins using C/C++ and turtle.
 * [04 - A simple amplifier plugin (part 2) - Code, compile & run](#04---a-simple-amplifier-plugin-part-2---code-compile--run)
 * [05 - A sound generator in C++](#05---a-sound-generator-in-c)
 * [06 - Atoms, URIDs & URIs](#06---atom-urids--uris)
+* [07 - The simplest MIDI synth (part 1)](#07---the-simplest-midi-synth-part-1)
 
 
 ## 00 - Announce
@@ -160,6 +161,21 @@ data of different types (like int, float, double, string, ..., and even other at
   * And **Sequences** are LV2_atoms which can take up multiple events.
 * **URI**: Unique identifier for each definition. 
 * **URID**: Serial number for an URI.
+
+
+## 07 - The Simplest MIDI Synth (Part 1)
+
+See video: https://youtu.be/PuOeP-ln7UA
+
+Programming a simple MIDI sine synth LV2 plugin based on our myTestTone.
+
+Topics:
+* Implementation of the LV2 extensions:
+  * Atom
+  * Urid
+  * Midi
+* Understanding LV2 MIDI atoms
+* Programming a basic MIDI interpreter
 
 
 ## Resources
