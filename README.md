@@ -13,6 +13,7 @@ Programming tutorial series for creating LV2 plugins using C/C++ and turtle.
 * [05 - A sound generator in C++](#05---a-sound-generator-in-c)
 * [06 - Atoms, URIDs & URIs](#06---atom-urids--uris)
 * [07 - The simplest MIDI synth (part 1)](#07---the-simplest-midi-synth-part-1)
+* [08 - The simplest MIDI synth (part 2)](#08---the-simplest-midi-synth-part-2)
 
 
 ## 00 - Announce
@@ -176,6 +177,18 @@ Topics:
   * Midi
 * Understanding LV2 MIDI atoms
 * Programming a basic MIDI interpreter
+
+
+## 08 - The Simplest MIDI Synth (Part 2)
+
+See video: once established
+
+Programming a simple MIDI sine synth LV2 plugin based on our myTestTone.
+
+Topics:
+* MIDI data
+* Convert MIDI notes to audio frequency
+* ADSR envelope
 
 
 ## Resources
