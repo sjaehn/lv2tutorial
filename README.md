@@ -181,7 +181,7 @@ Topics:
 
 ## 08 - The Simplest MIDI Synth (Part 2)
 
-See video: once established
+See video: https://youtu.be/-mnleLiofdI
 
 Programming a simple MIDI sine synth LV2 plugin based on our myTestTone.
 
