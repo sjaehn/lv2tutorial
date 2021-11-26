@@ -5,16 +5,20 @@ Programming tutorial series for creating LV2 plugins using C/C++ and turtle.
 
 ## Content
 
-* [00 - Announce](#00---announce)
-* [01 - Introduction: What is LV2? - And what do I need for plugin programming?](#01---introduction-what-is-lv2)
-* [02 - A simple amplifier (part 1) - Do the turtle](#02---a-simple-amplifier-part-1---do-the-turtle)
-* [03 - How LV2 plugins work](#03---how-lv2-plugins-work)
-* [04 - A simple amplifier plugin (part 2) - Code, compile & run](#04---a-simple-amplifier-plugin-part-2---code-compile--run)
-* [05 - A sound generator in C++](#05---a-sound-generator-in-c)
-* [06 - Atoms, URIDs & URIs](#06---atom-urids--uris)
-* [07 - The simplest MIDI synth (part 1)](#07---the-simplest-midi-synth-part-1)
-* [08 - The simplest MIDI synth (part 2)](#08---the-simplest-midi-synth-part-2)
-* [09 - Waveform Synth In C++ 11](##09---waveform-synth-in-C-11)
+- [Programming LV2 Plugins From Scratch](#programming-lv2-plugins-from-scratch)
+  - [Content](#content)
+  - [00 - Announce](#00---announce)
+  - [01 - Introduction: What is LV2?](#01---introduction-what-is-lv2)
+  - [02 - A Simple Amplifier (Part 1) - Do The Turtle](#02---a-simple-amplifier-part-1---do-the-turtle)
+  - [03 - How LV2 Plugins Work](#03---how-lv2-plugins-work)
+  - [04 - A Simple Amplifier Plugin (Part 2) - Code, Compile & Run](#04---a-simple-amplifier-plugin-part-2---code-compile--run)
+  - [05 - A Sound Generator In C++](#05---a-sound-generator-in-c)
+  - [06 - Atom, URIDs & URIs](#06---atom-urids--uris)
+  - [07 - The Simplest MIDI Synth (Part 1)](#07---the-simplest-midi-synth-part-1)
+  - [08 - The Simplest MIDI Synth (Part 2)](#08---the-simplest-midi-synth-part-2)
+  - [09 - Waveform Synth In C++ 11](#09---waveform-synth-in-c-11)
+  - [Resources](#resources)
+  - [Further reading](#further-reading)
 
 
 ## 00 - Announce
@@ -194,7 +198,7 @@ Topics:
 
 ## 09 - Waveform Synth In C++ 11
 
-See video: https://youtu.be/9txaZke9Xn0
+See video: https://youtu.be/5zbQLFNZRoI
 
 Add a waveform selection feature (sine, triangle, square, saw, noise) to our 
 synth. And this in modern C++. But first, we have to update our previously
