@@ -14,6 +14,7 @@ Programming tutorial series for creating LV2 plugins using C/C++ and turtle.
 * [06 - Atoms, URIDs & URIs](#06---atom-urids--uris)
 * [07 - The simplest MIDI synth (part 1)](#07---the-simplest-midi-synth-part-1)
 * [08 - The simplest MIDI synth (part 2)](#08---the-simplest-midi-synth-part-2)
+* [09 - Waveform Synth In C++ 11](##09---waveform-synth-in-C-11)
 
 
 ## 00 - Announce
@@ -189,6 +190,41 @@ Topics:
 * MIDI data
 * Convert MIDI notes to audio frequency
 * ADSR envelope
+
+
+## 09 - Waveform Synth In C++ 11
+
+See video: https://youtu.be/9txaZke9Xn0
+
+Add a waveform selection feature (sine, triangle, square, saw, noise) to our 
+synth. And this in modern C++. But first, we have to update our previously
+written code to C++11 too.
+
+Topics:
+* Enumerations in turtle using 
+  * lv2:enumeration: https://lv2plug.in/ns/lv2core#enumeration
+  * lv2:integer: https://lv2plug.in/ns/lv2core#integer
+  * lv2:scalePoint: https://lv2plug.in/ns/lv2core#scalePoint
+* Exceptions
+  * The try catch block: https://en.cppreference.com/w/cpp/language/try_catch
+  * std::invalid_argument: https://en.cppreference.com/w/cpp/error/invalid_argument
+  * std::bad_alloc: https://en.cppreference.com/w/cpp/memory/new/bad_alloc
+* Streams
+  * std::cerr: https://en.cppreference.com/w/cpp/io/cerr
+* C++11 type casting
+  * static_cast: https://en.cppreference.com/w/cpp/language/static_cast
+  * reinterpret_cast: https://en.cppreference.com/w/cpp/language/reinterpret_cast
+* Standard template library containers
+  * std::array: https://en.cppreference.com/w/cpp/container/array
+* constexpr: https://en.cppreference.com/w/cpp/keyword/constexpr
+* Utilities
+  * std::pair: https://en.cppreference.com/w/cpp/utility/pair
+* Templates: https://en.cppreference.com/w/cpp/language/templates
+* Linear fader
+* Overloading
+* Waveform mathematics
+* Random generator: https://en.cppreference.com/w/cpp/numeric/random
+* Value distributions
 
 
 ## Resources

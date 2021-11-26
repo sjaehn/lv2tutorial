@@ -1,0 +1,108 @@
+@prefix lv2:  <http://lv2plug.in/ns/lv2core#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix units: <http://lv2plug.in/ns/extensions/units#> .
+@prefix pprops: <http://lv2plug.in/ns/ext/port-props#> .
+@prefix atom: <http://lv2plug.in/ns/ext/atom#> .
+@prefix urid: <http://lv2plug.in/ns/ext/urid#> .
+@prefix midi: <http://lv2plug.in/ns/ext/midi#> .
+
+
+<https://github.com/sjaehn/lv2tutorial/mySimpleSynth> a lv2:Plugin , lv2:OscillatorPlugin , doap:Project ;
+    lv2:binary <mySimpleSynth.so> ;
+    doap:name "mySimpleSynth" ;
+    lv2:optionalFeature lv2:hardRTCapable ;
+    lv2:requiredFeature urid:map ;
+    lv2:minorVersion 2 ;
+    lv2:microVersion 0 ;
+
+    
+    lv2:port 
+        [
+            a lv2:InputPort , atom:AtomPort ;
+            lv2:index 0 ;
+            lv2:symbol "midi_in" ;
+            lv2:name "MIDI in" ;
+            atom:bufferType atom:Sequence ;
+            atom:supports midi:MidiEvent ;
+        ] ,
+
+        [
+            a lv2:OutputPort , lv2:AudioPort ;
+            lv2:index 1 ;
+            lv2:symbol "audio_out" ;
+            lv2:name "Audio output" ;
+        ] ,
+
+        [
+            a lv2:InputPort , lv2:ControlPort ;
+            lv2:index 2 ;
+            lv2:symbol "waveform" ;
+            lv2:name "Waveform" ;
+            lv2:portProperty lv2:integer , lv2:enumeration ;
+            lv2:scalePoint [ rdfs:label "Sine" ; rdf:value 0 ] ;
+            lv2:scalePoint [ rdfs:label "Triangle" ; rdf:value 1 ] ;
+            lv2:scalePoint [ rdfs:label "Square" ; rdf:value 2 ] ;
+            lv2:scalePoint [ rdfs:label "Saw" ; rdf:value 3 ] ;
+            lv2:scalePoint [ rdfs:label "Noise" ; rdf:value 4 ] ;
+            lv2:default 0 ;
+            lv2:minimum 0 ;
+            lv2:maximum 4 ;
+        ] ,
+        
+        [
+            a lv2:InputPort , lv2:ControlPort ;
+            lv2:index 3 ;
+            lv2:symbol "attack" ;
+            lv2:name "Attack" ;
+            lv2:default 0.1 ;
+            lv2:minimum 0.001 ;
+            lv2:maximum 4.0 ;
+            units:unit   units:s ;
+            lv2:portProperty pprops:logarithmic ;
+        ] ,
+
+        [
+            a lv2:InputPort , lv2:ControlPort ;
+            lv2:index 4 ;
+            lv2:symbol "decay" ;
+            lv2:name "Decay" ;
+            lv2:default 0.1 ;
+            lv2:minimum 0.001 ;
+            lv2:maximum 4.0 ;
+            units:unit   units:s ;
+            lv2:portProperty pprops:logarithmic ;
+        ] ,
+
+        [
+            a lv2:InputPort , lv2:ControlPort ;
+            lv2:index 5 ;
+            lv2:symbol "sustain" ;
+            lv2:name "Sustain" ;
+            lv2:default 0.5 ;
+            lv2:minimum 0.0 ;
+            lv2:maximum 1.0 ;
+        ] ,
+
+        [
+            a lv2:InputPort , lv2:ControlPort ;
+            lv2:index 6 ;
+            lv2:symbol "release" ;
+            lv2:name "Release" ;
+            lv2:default 0.1 ;
+            lv2:minimum 0.001 ;
+            lv2:maximum 4.0 ;
+            units:unit   units:s ;
+            lv2:portProperty pprops:logarithmic ;
+        ] ,
+        
+        [
+            a lv2:InputPort , lv2:ControlPort ;
+            lv2:index 7 ;
+            lv2:symbol "level" ;
+            lv2:name "Level" ;
+            lv2:default 0.1 ;
+            lv2:minimum 0.0 ;
+            lv2:maximum 1.0 ;
+        ] .
