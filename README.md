@@ -17,6 +17,7 @@ Programming tutorial series for creating LV2 plugins using C/C++ and turtle.
   - [07 - The Simplest MIDI Synth (Part 1)](#07---the-simplest-midi-synth-part-1)
   - [08 - The Simplest MIDI Synth (Part 2)](#08---the-simplest-midi-synth-part-2)
   - [09 - Waveform Synth In C++ 11](#09---waveform-synth-in-c-11)
+  - [10 - Performance & Polyphony](#10---performance--polyphony)
   - [Resources](#resources)
   - [Further reading](#further-reading)
 
@@ -229,6 +230,29 @@ Topics:
 * Waveform mathematics
 * Random generator: https://en.cppreference.com/w/cpp/numeric/random
 * Value distributions
+
+
+## 10 - Performance & Polyphony
+
+See video: https://youtu.be/uelx7poEMNY
+
+In the previous videos, we created a simple monosynth. This time, we will enable
+polyphony by the use of key containers. This video also shows the features and
+the limitations of the C++ standard template library (STL). And this video also
+shows different ways of increasing the plugin performance.
+
+Topics:
+* Header files
+* Polyphony using key as a std::array
+* Alternative STL containers
+  * std::vector
+  * std::map
+  * C++11 `for` loop
+  * Using interators
+  * Performance considerations
+  * Realtime compatibility
+* BUtility::BMap
+* Compiler flags (`-O3`, `-ffast-math`)
 
 
 ## Resources
