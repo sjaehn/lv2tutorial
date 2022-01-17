@@ -158,6 +158,7 @@ inline void Key::proceed ()
 {
     time += 1.0 / rate;
     position += freq / rate;
+    fader.proceed();
     if ((status == KEY_RELEASED) && (time >= envelope.release)) off();
 }
 
