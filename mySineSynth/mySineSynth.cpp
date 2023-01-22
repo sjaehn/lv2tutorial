@@ -339,7 +339,7 @@ static LV2_Descriptor const descriptor =
 };
 
 /* interface */
-extern "C" LV2_SYMBOL_EXPORT const LV2_Descriptor* lv2_descriptor (uint32_t index)
+LV2_SYMBOL_EXPORT const LV2_Descriptor* lv2_descriptor (uint32_t index)
 {
     if (index == 0) return &descriptor;
     else return NULL;
