@@ -1,6 +1,6 @@
 /* LV2 Plugin Template
  *
- * Copyright (C) 2018 - 2021 by Sven Jähnichen
+ * Copyright (C) 2018 - 2023 by Sven Jähnichen
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -37,7 +37,7 @@ LV2Plugin::LV2Plugin (double samplerate, const char* bundlePath, const LV2_Featu
 	// Optional scan host features for URID map
 	/*for (int i = 0; features[i]; ++i)
 	{
-		if (strcmp(features[i]->URI, LV2_URID__map) == 0) map = (LV2_URID_Map*) features[i]->data;
+		if (strcmp(features[i]->URI, LV2_URID__map) == 0) map = static_cast<LV2_URID_Map*>(features[i]->data);
 	}
 	if (!map) throw std::invalid_argument ("Host does not support urid:map");
 	urids.map (map);
@@ -55,22 +55,22 @@ void LV2Plugin::connect_port (uint32_t port, void *data)
 
 	switch (port) 
 	{
-		case LV2PLUGIN_CONTROL:		control = (LV2_Atom_Sequence*) data;
+		case LV2PLUGIN_CONTROL:		control = static_cast<LV2_Atom_Sequence*>(data);
 									break;
 
-		case LV2PLUGIN_NOTIFY:		notify = (LV2_Atom_Sequence*) data;
+		case LV2PLUGIN_NOTIFY:		notify = static_cast<LV2_Atom_Sequence*>(data);
 									break;
 
-		case LV2PLUGIN_AUDIO_IN:	audio_in = (float*) data;
+		case LV2PLUGIN_AUDIO_IN:	audio_in = static_cast<float*>(data);
 									break;
 
-		case LV2PLUGIN_AUDIO_OUT:	audio_out = (float*) data;
+		case LV2PLUGIN_AUDIO_OUT:	audio_out = static_cast<float*>(data);
 									break;
 		
 		default:
 			if ((port >= LV2PLUGIN_CONTROLLERS) && (port < LV2PLUGIN_CONTROLLERS + LV2PLUGIN_NR_CONTROLLERS))
 			{
-				controllers[port - LV2PLUGIN_CONTROLLERS] = (float*) data;
+				controllers[port - LV2PLUGIN_CONTROLLERS] = static_cast<float*>(data);
 			}
 	}
 }
@@ -104,7 +104,7 @@ void LV2Plugin::run (uint32_t n_samples)
 	{
 		if ((ev->body.type == urids.atom_Object) || (ev->body.type == urids.atom_Blank))
 		{
-			const LV2_Atom_Object* obj = (const LV2_Atom_Object*)&ev->body;
+			const LV2_Atom_Object* obj = static_cast<const LV2_Atom_Object*>(&ev->body);
 
 			if (obj->body.otype == ...)
 			{
@@ -129,7 +129,7 @@ void LV2Plugin::run (uint32_t n_samples)
 
 
 	// Optional close off sequence
-	//lv2_atom_forge_pop (&forge, &forge_frame);
+	// lv2_atom_forge_pop (&forge, &forge_frame);
 }
 
 void LV2Plugin::process (uint32_t start, uint32_t end)
@@ -190,32 +190,32 @@ static LV2_Handle instantiate (const LV2_Descriptor* descriptor, double samplera
 
 static void connect_port (LV2_Handle instance, uint32_t port, void *data)
 {
-	LV2Plugin* inst = (LV2Plugin*) instance;
+	LV2Plugin* inst = static_cast<LV2Plugin*>(instance);
 	if (inst) inst->connect_port (port, data);
 }
 
 static void activate (LV2_Handle instance)
 {
-	LV2Plugin* inst = (LV2Plugin*) instance;
+	LV2Plugin* inst = static_cast<LV2Plugin*>(instance);
 	if (inst) inst->activate ();
 }
 
 static void run (LV2_Handle instance, uint32_t n_samples)
 {
-	LV2Plugin* inst = (LV2Plugin*) instance;
+	LV2Plugin* inst = static_cast<LV2Plugin*>(instance);
 	if (inst) inst->run (n_samples);
 }
 
 static void deactivate (LV2_Handle instance)
 {
-	LV2Plugin* inst = (LV2Plugin*) instance;
+	LV2Plugin* inst = static_cast<LV2Plugin*>(instance);
 	if (inst) inst->deactivate ();
 }
 
 /*static LV2_State_Status state_save (LV2_Handle instance, LV2_State_Store_Function store, LV2_State_Handle handle, uint32_t flags,
            const LV2_Feature* const* features)
 {
-	LV2Plugin* inst = (LV2Plugin*)instance;
+	LV2Plugin* inst = static_cast<LV2Plugin*>(instance);
 	if (!inst) return LV2_STATE_SUCCESS;
 
 	return inst->state_save (store, handle, flags, features);
@@ -224,7 +224,7 @@ static void deactivate (LV2_Handle instance)
 /*static LV2_State_Status state_restore (LV2_Handle instance, LV2_State_Retrieve_Function retrieve, LV2_State_Handle handle, uint32_t flags,
            const LV2_Feature* const* features)
 {
-	LV2Plugin* inst = (LV2Plugin*)instance;
+	LV2Plugin* inst = static_cast<LV2Plugin*>(instance);
 	if (!inst) return LV2_STATE_SUCCESS;
 
 	return inst->state_restore (retrieve, handle, flags, features);
@@ -233,7 +233,7 @@ static void deactivate (LV2_Handle instance)
 /*static LV2_Worker_Status work (LV2_Handle instance, LV2_Worker_Respond_Function respond, LV2_Worker_Respond_Handle handle,
 	uint32_t size, const void* data)
 {
-	LV2Plugin* inst = (LV2Plugin*)instance;
+	LV2Plugin* inst = static_cast<LV2Plugin*>(instance);
 	if (!inst) return LV2_WORKER_SUCCESS;
 
 	return inst->work (respond, handle, size, data);
@@ -241,7 +241,7 @@ static void deactivate (LV2_Handle instance)
 
 /*static LV2_Worker_Status work_response (LV2_Handle instance, uint32_t size,  const void* data)
 {
-	LV2Plugin* inst = (LV2Plugin*)instance;
+	LV2Plugin* inst = static_cast<LV2Plugin*>(instance);
 	if (!inst) return LV2_WORKER_SUCCESS;
 
 	return inst->work_response (size, data);
@@ -249,7 +249,7 @@ static void deactivate (LV2_Handle instance)
 
 /*static LV2_Worker_Status end_run (LV2_Handle instance)
 {
-	LV2Plugin* inst = (LV2Plugin*)instance;
+	LV2Plugin* inst = static_cast<LV2Plugin*>(instance);
 	if (!inst) return LV2_WORKER_SUCCESS;
 
 	return inst->end_run ();
@@ -257,7 +257,7 @@ static void deactivate (LV2_Handle instance)
 
 static void cleanup (LV2_Handle instance)
 {
-	LV2Plugin* inst = (LV2Plugin*) instance;
+	LV2Plugin* inst = static_cast<LV2Plugin*>(instance);
 	if (inst) delete inst;
 }
 

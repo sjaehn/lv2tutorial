@@ -31,7 +31,7 @@ struct LV2PluginURIDs
 	void map (LV2_URID_Map* m);
 };
 
-void LV2PluginURIDs::map (LV2_URID_Map* m)
+inline void LV2PluginURIDs::map (LV2_URID_Map* m)
 {
 	lv2plugin_example = m->map(m->handle, "https://www.your-url.com/LV2Stub#lv2plugin_example");
 }
