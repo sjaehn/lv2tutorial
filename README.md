@@ -19,7 +19,8 @@ Programming tutorial series for creating LV2 plugins using C/C++ and turtle.
   - [10 - Performance & Polyphony](#10---performance--polyphony)
   - [11 - Programming Realtime Audio](#11---programming-realtime-audio)
 
-- [Programming LV2 Plugins From Scratch II - User Interfaces](#programming-lv2-plugins-from-scratch-ii---user-interfaces) 
+- [Programming LV2 Plugins From Scratch II - User Interfaces](#programming-lv2-plugins-from-scratch-ii---user-interfaces)
+  - [00 - Announce II](#00---announce-ii)
 
 - [Resources](#resources)
 - [Further reading](#further-reading)
@@ -288,7 +289,9 @@ Topics:
 
 ## Programming LV2 Plugins From Scratch II - User Interfaces
 
-Comming soon ... 
+### 00 - Announce II
+
+See video: https://youtu.be/7mCLDBBXajU
 
 
 ## Resources
