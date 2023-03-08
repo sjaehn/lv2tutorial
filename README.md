@@ -21,6 +21,7 @@ Programming tutorial series for creating LV2 plugins using C/C++ and turtle.
 
 - [Programming LV2 Plugins From Scratch II - User Interfaces](#programming-lv2-plugins-from-scratch-ii---user-interfaces)
   - [00 - Announce II](#00---announce-ii)
+  - [01 - Introduction Into LV2 UIs](#01---introduction-into-lv2-uis)
 
 - [Resources](#resources)
 - [Further reading](#further-reading)
@@ -292,6 +293,28 @@ Topics:
 ### 00 - Announce II
 
 See video: https://youtu.be/7mCLDBBXajU
+
+
+### 01 - Introduction Into LV2 UIs
+
+See video: Friday, 10/03/2023 14:00 CET
+
+There are different ways to create LV2 UIs. You can either use frameworks (to create a whole plugin including its UI) and designers or do it from scratch.
+
+Topics:
+* Frameworks:
+  * JUCE: https://juce.com
+  * DPF: https://github.com/DISTRHO/DPF
+* Designers:
+  * XUiDesigner: https://github.com/brummer10/XUiDesigner
+* Coding from the scratch:
+  * Interfaces to
+    * Mac
+    * Windows
+    * X11
+    * GTK
+    * Qt
+  * Resource: https://lv2plug.in/ns/extensions/ui
 
 
 ## Resources
