@@ -294,10 +294,13 @@ Topics:
 
 See video: https://youtu.be/7mCLDBBXajU
 
+Watch first the videos of Programming LV2 Plugins From Scratch I:
+https://www.youtube.com/watch?v=51eHCA4oCEI&list=PLkuRaNsK2AJ0D8uhRIjftgmqVW0yvDfMx 
+
 
 ### 01 - Introduction Into LV2 UIs
 
-See video: Friday, 10/03/2023 14:00 CET
+See video: https://youtu.be/1HT2c5s82Ks
 
 There are different ways to create LV2 UIs. You can either use frameworks (to create a whole plugin including its UI) and designers or do it from scratch.
 

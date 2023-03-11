@@ -1,0 +1,39 @@
+@prefix lv2:  <http://lv2plug.in/ns/lv2core#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix ui: <http://lv2plug.in/ns/extensions/ui#> .
+
+<https://github.com/sjaehn/lv2tutorial/myAmp_GTK#ui> a ui:GtkUI ;
+    lv2:binary <myAmp_GTK.so> .
+
+<https://github.com/sjaehn/lv2tutorial/myAmp_GTK> a lv2:Plugin , lv2:AmplifierPlugin , doap:Project ;
+    lv2:binary <myAmp.so> ;
+    doap:name "MyAmp_GTK" ;
+    lv2:optionalFeature lv2:hardRTCapable ;
+    ui:ui <https://github.com/sjaehn/lv2tutorial/myAmp_GTK#ui> ;
+    
+    lv2:port 
+        [
+            a lv2:InputPort , lv2:AudioPort ;
+            lv2:index 0 ;
+            lv2:symbol "audio_in" ;
+            lv2:name "Audio input";
+        ] , 
+
+        [
+            a lv2:OutputPort , lv2:AudioPort ;
+            lv2:index 1 ;
+            lv2:symbol "audio_out" ;
+            lv2:name "Audio output" ;
+        ] ,
+
+        [
+            a lv2:InputPort , lv2:ControlPort ;
+            lv2:index 2 ;
+            lv2:symbol "amp" ;
+            lv2:name "Amplification" ;
+            lv2:default 1.0 ;
+            lv2:minimum 0.0 ;
+            lv2:maximum 2.0 ;
+        ] .
