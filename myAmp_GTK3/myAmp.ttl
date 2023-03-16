@@ -4,14 +4,14 @@
 @prefix doap: <http://usefulinc.com/ns/doap#> .
 @prefix ui: <http://lv2plug.in/ns/extensions/ui#> .
 
-<https://github.com/sjaehn/lv2tutorial/myAmp_GTK#ui> a ui:GtkUI ;
-    lv2:binary <myAmp_GTK.so> .
+<https://github.com/sjaehn/lv2tutorial/myAmp_GTK3#ui> a ui:Gtk3UI ;
+    lv2:binary <myAmp_GTK3.so> .
 
-<https://github.com/sjaehn/lv2tutorial/myAmp_GTK> a lv2:Plugin , lv2:AmplifierPlugin , doap:Project ;
+<https://github.com/sjaehn/lv2tutorial/myAmp_GTK3> a lv2:Plugin , lv2:AmplifierPlugin , doap:Project ;
     lv2:binary <myAmp.so> ;
-    doap:name "MyAmp_GTK" ;
+    doap:name "MyAmp_GTK3" ;
     lv2:optionalFeature lv2:hardRTCapable ;
-    ui:ui <https://github.com/sjaehn/lv2tutorial/myAmp_GTK#ui> ;
+    ui:ui <https://github.com/sjaehn/lv2tutorial/myAmp_GTK3#ui> ;
     
     lv2:port 
         [

@@ -1,0 +1,11 @@
+CompileFlags:
+  Add: ["--include-directory=/home/sven/dev/c/lv2tutorial/myAmp_BWidgets/BWidgets/include", "--include-directory=/usr/include/gtk-3.0/gdk",
+        "--include-directory=/usr/include/gtk-3.0",
+        "--include-directory=/usr/include/glib-2.0", 
+        "--include-directory=/usr/lib/x86_64-linux-gnu/glib-2.0/include", 
+        "--include-directory=/usr/include/pango-1.0",
+        "--include-directory=/usr/include/harfbuzz",
+        "--include-directory=/usr/include/cairo",
+        "--include-directory=/usr/include/gdk-pixbuf-2.0",
+        "--include-directory=/usr/include/atk-1.0",
+        "--include-directory=/home/sven/dev/c/lv2tutorial/myAmp_Xputty/libxputty/libxputty/include"]

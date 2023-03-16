@@ -22,7 +22,8 @@ Programming tutorial series for creating LV2 plugins using C/C++ and turtle.
 - [Programming LV2 Plugins From Scratch II - User Interfaces](#programming-lv2-plugins-from-scratch-ii---user-interfaces)
   - [00 - Announce II](#00---announce-ii)
   - [01 - Introduction Into LV2 UIs](#01---introduction-into-lv2-uis)
-
+  - [02 - A Simple Plugin UI Using GTK (Part 1)](#02---a-simple-plugin-ui-using-gtk-part-1)
+  - [03 - A Simple Plugin UI Using GTK (Part 2)](#03---a-simple-plugin-ui-using-gtk-part-2)
 - [Resources](#resources)
 - [Further reading](#further-reading)
 
@@ -302,7 +303,9 @@ https://www.youtube.com/watch?v=51eHCA4oCEI&list=PLkuRaNsK2AJ0D8uhRIjftgmqVW0yvD
 
 See video: https://youtu.be/1HT2c5s82Ks
 
-There are different ways to create LV2 UIs. You can either use frameworks (to create a whole plugin including its UI) and designers or do it from scratch.
+There are different ways to create LV2 UIs. You can either use frameworks 
+(to create a whole plugin including its UI) and designers or do it from 
+scratch.
 
 Topics:
 * Frameworks:
@@ -318,6 +321,66 @@ Topics:
     * GTK
     * Qt
   * Resource: https://lv2plug.in/ns/extensions/ui
+
+
+### 02 - A Simple Plugin UI Using GTK (Part 1)
+
+See video: Friday, 17/03/2023 14.00 CET
+
+Note: This video was made for teaching and demonstration of LV2UI. The use of 
+GTK and Qt within plugins is not recommended.
+
+Create our first own graphical LV2 plugin user interface. First, we define our
+environment for programming LV2 UIs by:
+* add the UI metadata to the manifest (and a linked plugin turtle file)
+* create an UI binary file with
+  * a public C interface function for the LV2UI (export function)
+  * a static/private interface struct containing
+    * the UI URI
+    * function pointers to the four UI functions
+  * the four static/private UI functions
+    * instantiate
+    * cleanup
+    * port_event
+    * extension_data
+  * an UI class definition.
+
+This "boilerplate" can be used for all GTK3-based LV2 plugins. And with some
+minor adaptions for any LV2 plugin.
+
+GTK3: https://docs.gtk.org/gtk3/ 
+
+
+### 03 - A Simple Plugin UI Using GTK (Part 2)
+
+See video: Friday, 17/03/2023 14.00 CET
+
+Note: This video was made for teaching and demonstration of LV2UI. The use of 
+GTK and Qt within plugins is not recommended.
+
+Coding the GTK3 UI, main steps:
+* create a container (box) as a top level widget (in constructor)
+* create a vertical scale (slider)
+* add the slider to the box
+* set the slider value by values received from the plugin DSP (in portEvent)
+* define a callback function (valueChangedCallback) to handle changed slider values
+* link the callback function (in constructor)
+* send changed slider values to the plugin DSP (in valueChangedCallback)
+
+Build:
+* plugin DSP: 
+  ```
+  gcc myAmp.c -fvisibility=hidden -fPIC -DPIC -shared -pthread -lm `pkg-config --cflags --libs lv2` -o myAmp.so
+  ```
+* UI: 
+  ```
+  g++ myAmp_GTK3.c -fvisibility=hidden -fPIC -DPIC -shared -pthread -lm `pkg-config --cflags --libs lv2 gtk+-3.0` -o myAmp_GTK3.so
+  ```
+
+* Copy both .so files and the two .ttl files into a subfolder (e. g., 
+myAmp_GTK3.lv2) of your lv2 directory.
+
+GTK3: https://docs.gtk.org/gtk3/
 
 
 ## Resources
