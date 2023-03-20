@@ -325,7 +325,7 @@ Topics:
 
 ### 02 - A Simple Plugin UI Using GTK (Part 1)
 
-See video: Friday, 17/03/2023 14.00 CET
+See video: https://youtu.be/hSnMVSIBfww
 
 Note: This video was made for teaching and demonstration of LV2UI. The use of 
 GTK and Qt within plugins is not recommended.
@@ -353,7 +353,7 @@ GTK3: https://docs.gtk.org/gtk3/
 
 ### 03 - A Simple Plugin UI Using GTK (Part 2)
 
-See video: Friday, 17/03/2023 14.00 CET
+See video: https://youtu.be/bVJ3WBRHAEg
 
 Note: This video was made for teaching and demonstration of LV2UI. The use of 
 GTK and Qt within plugins is not recommended.
