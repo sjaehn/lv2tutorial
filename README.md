@@ -25,6 +25,8 @@ Programming tutorial series for creating LV2 plugins using C/C++ and turtle.
   - [02 - A Simple Plugin UI Using GTK (Part 1)](#02---a-simple-plugin-ui-using-gtk-part-1)
   - [03 - A Simple Plugin UI Using GTK (Part 2)](#03---a-simple-plugin-ui-using-gtk-part-2)
   - [04 - What's Sooo Bad About GTK?](#04---whats-sooo-bad-about-gtk)
+  - [05 - Make A Simple Amp Plugin UI With XPutty](#05---make-a-simple-amp-plugin-ui-with-xputty)
+  - [06 - Make A Simple Amp Plugin UI With XPutty II](#06---make-a-simple-amp-plugin-ui-with-xputty-ii)
   
 - [Resources](#resources)
 - [Further reading](#further-reading)
@@ -424,6 +426,65 @@ steps than shown in this video. Including relocation, symbol table, symbol
 resolution, ... . But this would be far beyond this tutorial series. 
 
 And there are also different ways of loading plugins by the host.
+
+
+### 05 - Make A Simple Amp Plugin UI With XPutty
+
+See video: Friday, 2023/04/07, 14:00 CET
+
+We create an X11-based graphical user interface with 
+[Xputty](https://github.com/brummer10/libxputty).
+
+Topics:
+* New requirements for X11:
+  * Declare as an X11 user interface: `ui:X11UI`
+  * Information about the host-provided parent window
+  * Interface for the to call the plugin UI event loops: idle interface
+    * `lv2:requiredFeature ui:idleInterface`
+    * `lv2:extensionData ui:idleInterface`
+  * Destructor to cleanup / deallocate plugin UI widgets
+* Construct the UI
+  * Init Xputty:`main_init ()`
+  * Create a top level widget: `create_window ()`
+  * Create a dial widget inside the top level widget: `add_knob ()`
+  * Link the dial to valueChangedCallback
+  * Add values and a value range: `set_adjustment ()`
+  * Visualize: `widget_show_all ()`
+* Set dial value via portEvent: `adj_set_value ()`
+* Get dial value in valueChangedCallback: `adj_get_value ()`
+* Idle interface
+  * Provide a static idle interface function
+  * Call `run_embedded ()`
+  * Link idle interface function in extension data
+
+Xputty: https://github.com/brummer10/libxputty
+
+
+### 06 - Make A Simple Amp Plugin UI With XPutty II
+
+See video: Friday, 2023/04/07, 14:00 CET
+
+We compile and optimize the [Xputty](https://github.com/brummer10/libxputty)-based
+plugin we made before.
+
+Compile:
+* Plugin DSP:
+  ```
+  gcc myAmp.c -fvisibility=hidden -fPIC -DPIC -shared -pthread `pkg-config --cflags lv2` -Wl,-Bstatic -lm `pkg-config --libs --static lv2` -Wl,-Bdynamic -o myAmp.so
+  ```
+* User interface:
+  ```
+  g++ myAmp_Xputty.cpp -fvisibility=hidden -fPIC -DPIC -shared -pthread -Ilibxputty/libxputty/include `pkg-config --cflags lv2 cairo x11` -Llibxputty/libxputty -Wl,-Bstatic -lm `pkg-config --libs --static lv2` -Wl,-Bdynamic `pkg-config --libs cairo x11` -o myAmp_Xputty.so
+  ```
+
+* Optimization:
+  * Load background image: `widget_get_png_from_file ()`
+  * Visualize it in an expose event callback:
+    * `cairo_set_source_surface ()`
+    * `cairo_paint ()`
+
+Xputty: https://github.com/brummer10/libxputty
+Cairo: https://www.cairographics.org/manual/
 
 
 ## Resources
