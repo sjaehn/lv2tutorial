@@ -389,7 +389,7 @@ GTK3: https://docs.gtk.org/gtk3/
 
 ### 04 - What's Sooo Bad About GTK?
 
-See video: Friday, 2023/03/24, 14:00 CET
+See video: https://www.youtube.com/watch?v=Mp58M9ZGeSs
 
 No, GTK is not bad! But the use within plugins is not recommended. And this
 is also true for other big GUI toolkits. Like Qt.
