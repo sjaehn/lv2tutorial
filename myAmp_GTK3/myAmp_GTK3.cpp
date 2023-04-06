@@ -48,7 +48,7 @@ int MyAmpUI::valueChangedCallback (GtkWidget* widget, gpointer data)
 
 static LV2UI_Handle instantiate(const struct LV2UI_Descriptor *descriptor, const char *plugin_uri, const char *bundle_path, LV2UI_Write_Function write_function, LV2UI_Controller controller, LV2UI_Widget *widget, const LV2_Feature *const *features)
 {
-    if (strcmp (plugin_uri, "https://github.com/sjaehn/lv2tutorial/myAmp_GTK") != 0) return nullptr;
+    if (strcmp (plugin_uri, "https://github.com/sjaehn/lv2tutorial/myAmp_GTK3") != 0) return nullptr;
     MyAmpUI* ui;
     try {ui = new MyAmpUI(write_function, controller);}
     catch (std::exception& exc)
