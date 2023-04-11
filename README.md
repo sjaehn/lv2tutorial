@@ -430,7 +430,7 @@ And there are also different ways of loading plugins by the host.
 
 ### 05 - Make A Simple Amp Plugin UI With XPutty
 
-See video: Friday, 2023/04/07, 14:00 CET
+See video: https://youtu.be/no9pBAi-F1c
 
 We create an X11-based graphical user interface with 
 [Xputty](https://github.com/brummer10/libxputty).
