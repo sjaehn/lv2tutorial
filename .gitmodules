@@ -1,7 +1,4 @@
 [submodule "myAmp_Xputty/libxputty"]
 	path = myAmp_Xputty/libxputty
-	url = https://github.com/brummer10/libxputty.git
-	ignore = dirty
-[submodule "myAmp_GTK3/libxputty"]
-	path = myAmp_GTK3/libxputty
 	url = https://github.com/brummer10/libxputty
+	ignore = dirty
