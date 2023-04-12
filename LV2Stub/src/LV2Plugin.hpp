@@ -1,34 +1,31 @@
-/* LV2 Plugin Template
- *
- * Copyright (C) 2018 - 2021 by Sven Jähnichen
- *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 3, or (at your option)
- * any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software Foundation,
- * Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
- */
-
 #ifndef LV2PLUGIN_HPP_
 #define LV2PLUGIN_HPP_
 
+
+// LV2 core, always required
 #include <lv2/lv2plug.in/ns/lv2core/lv2.h>
+
+
+// LV2 extensions, optional
 #include <lv2/lv2plug.in/ns/ext/atom/atom.h>
-#include <lv2/lv2plug.in/ns/ext/atom/forge.h>
+//#include <lv2/lv2plug.in/ns/ext/atom/forge.h>
 //#include <lv2/lv2plug.in/ns/ext/urid/urid.h>
 //#include <lv2/lv2plug.in/ns/ext/state/state.h>
 //#include <lv2/lv2plug.in/ns/ext/worker/worker.h>
+//#include <lv2/lv2plug.in/ns/ext/time/time.h>
+//#include <lv2/lv2plug.in/ns/ext/midi/midi.h>
 
+
+// Plugin URIs
 #define LV2PLUGIN_URI "https://www.your-url.com/LV2Stub"
+//#define LV2PLUGIN_GUI_URI LV2PLUGIN_URI "#gui"
+
+
+// Port definition
 #include "Ports.hpp"
+
+
+// Optional, map URI(D)s. Only needed if map / atom / urid is used.
 #include "Urids.hpp"
 
 

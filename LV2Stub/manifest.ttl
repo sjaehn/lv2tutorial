@@ -1,13 +1,21 @@
+# Required prefix definitions
+
 @prefix lv2:  <http://lv2plug.in/ns/lv2core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ui:   <http://lv2plug.in/ns/extensions/ui#>.
+
+
+# Plugin definition
 
 <https://www.your-url.com/LV2Stub>
         a lv2:Plugin ;
         lv2:binary <LV2Stub.so> ;
         rdfs:seeAlso <LV2Stub.ttl> .
 
-<https://www.your-url.com/LV2Stub#gui>
-        a ui:X11UI;
-	ui:binary <LV2Stub_GUI.so>;
-	rdfs:seeAlso <LV2Stub_GUI.ttl>.
+
+# Graphical user interface definition, optional
+
+#<https://www.your-url.com/LV2Stub#gui>
+#        a ui:X11UI;
+#	ui:binary <LV2Stub_GUI.so>;
+#	rdfs:seeAlso <LV2Stub_GUI.ttl>.

@@ -1,27 +1,9 @@
-/* LV2 Plugin Template
- *
- * Copyright (C) 2018 - 2023 by Sven Jähnichen
- *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 3, or (at your option)
- * any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software Foundation,
- * Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
- */
-
 #include "LV2Plugin.hpp"
-//#include <lv2/lv2plug.in/ns/ext/time/time.h>
-//#include <lv2/lv2plug.in/ns/ext/midi/midi.h>
-#include <lv2/lv2plug.in/ns/ext/atom/util.h>
 #include <stdexcept>
+
+// Utilities for LV2 atoms, only needed if the plugin uses atoms
+#include <lv2/lv2plug.in/ns/ext/atom/util.h>
+
 
 LV2Plugin::LV2Plugin (double samplerate, const char* bundlePath, const LV2_Feature* const* features) :
 	//map (nullptr),
@@ -87,7 +69,7 @@ void LV2Plugin::run (uint32_t n_samples)
 
 	uint32_t last_t = 0;
 
-	// Check ports
+	// Check if all ports are connected
 	if ((!control) || (!notify) || (!audio_in) || (!audio_out)) return;
 	for (int i = 0; i < LV2PLUGIN_NR_CONTROLLERS; ++i)
 	{

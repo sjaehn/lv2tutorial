@@ -1,8 +1,14 @@
+# Core prefixes, (almost) always needed
+
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix doap: <http://usefulinc.com/ns/doap#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix lv2:  <http://lv2plug.in/ns/lv2core#> .
+
+
+# LV2 extension prefixes, optional
+
 @prefix atom: <http://lv2plug.in/ns/ext/atom#> .
 #@prefix urid: <http://lv2plug.in/ns/ext/urid#> .
 #@prefix time: <http://lv2plug.in/ns/ext/time#> .
@@ -10,8 +16,10 @@
 #@prefix state: <http://lv2plug.in/ns/ext/state#> .
 #@prefix work:  <http://lv2plug.in/ns/ext/worker#> .
 #@prefix rsz: <http://lv2plug.in/ns/ext/resize-port#> .
-@prefix ui: <http://lv2plug.in/ns/extensions/ui#> .
+#@prefix ui: <http://lv2plug.in/ns/extensions/ui#> .
 
+
+# Maintainer information
 
 <https://www.your-url.com/maintainer>
 	a foaf:Person;
@@ -19,19 +27,23 @@
 #	foaf:mbox <>;			                        # Author e-mail address
 #	foaf:homepage <> . 		                        # Author homepage
 
-<https://www.your-url.com/LV2Stub#gui>
-	a ui:X11UI;                                             # Or another UI type. Omit Qt / GTK. Also see https://lv2plug.in/ns/extensions/ui
-	ui:binary <LV2Stub_GUI.so> ;
-	lv2:extensionData ui:idleInterface ;                    # Required feature for calling X11 UIs.
-#       lv2:extensionData ui:resize ;                           # Optional feature for resizable UIs.
-#	lv2:optionalFeature ui:resize ;                         # Optional feature for resizable UIs.
-	lv2:requiredFeature ui:idleInterface .                  # Required feature for calling X11 UIs.
+
+# LV2 graphical user interface
+
+#<https://www.your-url.com/LV2Stub#gui>
+#	a ui:X11UI;                                             # Or another UI type. Omit Qt / GTK. Also see https://lv2plug.in/ns/extensions/ui
+#	ui:binary <LV2Stub_GUI.so> ;
+#	lv2:extensionData ui:idleInterface ;                    # Required extension for calling X11 UIs.
+#	lv2:requiredFeature ui:idleInterface .                  # Required feature for calling X11 UIs.
+
+
+# LV2 plugin (DSP)
 
 <https://www.your-url.com/LV2Stub>
         a lv2:Plugin, doap:Project;	                        # Also add the plugin type, e. g., lv2:FilterPlugin. Also see https://lv2plug.in/ns/lv2core
         doap:name "LV2Stub" ;		                        # Plugin name
         rdfs:comment "Plugin stub" ;	                        # Plugin description
-	doap:maintainer <https://www.your-url.com/maintainer> ; # Plugin maintainer
+	doap:maintainer <https://www.your-url.com/maintainer> ; # Plugin maintainer, as defined above
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ; # Or another license
 	lv2:microVersion 1 ;                                    # For numbering see https://lv2plug.in/ns/lv2core
 	lv2:minorVersion 0 ;                                    # For numbering see https://lv2plug.in/ns/lv2core
@@ -41,8 +53,9 @@
 #       lv2:requiredFeature work:schedule ;                     # Only needed if worker is used
 #	lv2:extensionData state:interface;                      # Only needed if additional data are stored in the plugin state
 #	lv2:extensionData work:interface;                       # Only needed if worker is used
-	ui:ui <https://www.your-url.com/LV2Stub#gui> ;
+#	ui:ui <https://www.your-url.com/LV2Stub#gui> ;          # Only needed if a graphical user interface is provided
 	
+
 #	Plugin ports section
 #	
 #	Select the ports required for the plugin and adapt them to your needs.
@@ -63,6 +76,7 @@
                 lv2:name "Control" ;
         ] , 
         
+
 #	Example for an atom message output port.
 #	This port type is used for dsp to host / gui communication via atoms.
         [
@@ -83,6 +97,7 @@
                 lv2:name "Audio in" ;
         ] , 
         
+
 #	Example for an audio output port.
         [
                 a lv2:AudioPort , lv2:OutputPort ;
@@ -91,6 +106,7 @@
                 lv2:name "Audio Out" ;
         ] ,
         
+
 #	Example for a simple control (input) port.
 #	This type is used for the control of plugin variables via dials and sliders.
         [
@@ -104,6 +120,7 @@
                 rdfs:comment "Optional comment";
         ] ,
         
+
 #	Example for a toggle control (input) port.
 #	This type is used for the control of plugin variables via on / off switches.      
         [
@@ -118,6 +135,7 @@
                 rdfs:comment "Optional comment";
         ] ,
         
+
 #	Example for a enum control (input) port.
 #	This type is used for the control of plugin variables with different pre-defined states.      
         [
