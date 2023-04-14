@@ -74,7 +74,7 @@ sudo pacman -S pkg-config lv2 libsndfile libX11-dev cairo
 
 Recommended optional tools:
 * Jalv (minimal LV2 host)
-* [lv2lint](https://github.com/OpenMusicKontrollers/lv2lint) (validation)
+* [lv2lint](https://git.open-music-kontrollers.ch/~hp/lv2lint) (validation)
 * gdb (debugger)
 * valgrind (memory debugging / leak detection)
 
@@ -462,7 +462,7 @@ Xputty: https://github.com/brummer10/libxputty
 
 ### 06 - Make A Simple Amp Plugin UI With XPutty II
 
-See video: Friday, 2023/04/07, 14:00 CET
+See video: https://youtu.be/lXYyu7Ta7C4
 
 We compile and optimize the [Xputty](https://github.com/brummer10/libxputty)-based
 plugin we made before.
