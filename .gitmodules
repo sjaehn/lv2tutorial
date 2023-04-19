@@ -1,4 +1,6 @@
+[submodule "myAmp_BWidgets/BWidgets"]
+	path = myAmp_BWidgets/BWidgets
+	url = https://github.com/sjaehn/BWidgets.git
 [submodule "myAmp_Xputty/libxputty"]
 	path = myAmp_Xputty/libxputty
-	url = https://github.com/brummer10/libxputty
-	ignore = dirty
+	url = https://github.com/brummer10/libxputty.git
