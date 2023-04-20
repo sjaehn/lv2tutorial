@@ -1,0 +1,32 @@
+name: Deploy site
+
+on: { push: { branches: [master] } }
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+          # needed for accurate dates and blog plugin
+          fetch-depth: 0
+      - name: Install Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+      - name: Cache build data
+        uses: actions/cache@v3
+        with:
+          key: ${{ github.ref }}
+          path: .cache
+      - name: Install MKDocs
+        run: |
+          pip install mkdocs-material      # will also install mkdocs
+          pip install mkdocs-macros-plugin # Python and Jinja2 in markdown
+      - name: Build and deploy
+        run: mkdocs gh-deploy --force

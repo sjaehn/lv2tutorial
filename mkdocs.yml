@@ -1,0 +1,82 @@
+site_dir: "_site"
+site_description: "lv2tutorials"
+site_name: "lv2tutorials"
+site_url: "https://lv2tutorials.github.io/"
+site_author: "lv2tutorials team"
+
+copyright: "Copyright &copy; 2023 lv2tutorials team"
+
+repo_name: "GitHub"
+repo_url: "https://github.com/sjaehn/lv2tutorial/"
+
+remote_branch: "www"
+
+extra_css:
+- common/stylesheets/github.css
+
+markdown_extensions:
+  toc:
+    permalink: 🔗 # or `true` for the default anchor header icon
+
+  pymdownx.highlight:       # TODO: replace all these with highlight.js
+    anchor_linenums: true   #
+  pymdownx.inlinehilite: {} #
+  pymdownx.superfences: {}
+
+plugins:
+  search: {}
+  macros: {}
+
+theme:
+  name: "material"
+  font: false
+  icon:
+    admonition:
+      abstract: fontawesome/solid/person-digging
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+  palette:
+  # Palette toggle for light mode
+  - media: "(prefers-color-scheme: light)"
+    scheme: "default"
+    toggle:
+      icon: "material/weather-night"
+      name: "Switch to dark mode"
+  # Palette toggle for dark mode
+  - media: "(prefers-color-scheme: dark)"
+    scheme: "slate"
+    toggle:
+      icon: "material/weather-sunny"
+      name: "Switch to light mode"
+  features:
+  - content.action.edit
+  - content.action.view
+  - content.code.copy
+  - header.autohide
+  - navigation.footer
+nav:
+- "index.md"
+- "build.md"
+- LV2 From Scratch I - Getting Started:
+  - "1_00_announce.md"
+  - "1_01_what_is_lv2.md"
+  - "1_02_simple_amp_1.md"
+  - "1_03_how_lv2_plugins_work.md"
+  - "1_04_simple_amp_2.md"
+  - "1_05_sound_gen_cpp.md"
+  - "1_06_atom_urids_uris.md"
+  - "1_07_simplest_midi_synth_1.md"
+  - "1_08_simplest_midi_synth_2.md"
+  - "1_09_waveform_synth_cpp11.md"
+  - "1_10_performance_polyphony.md"
+  - "1_11_programming_rt_audio.md"
+- LV2 From Scratch II - UIs:
+  - "2_00_announce.md"
+  - "2_01_lv2_ui_intro.md"
+  - "2_02_simple_plugin_ui_gtk_1.md"
+  - "2_03_simple_plugin_ui_gtk_2.md"
+  - "2_04_whats_so_bad_gtk.md"
+  - "2_05_simple_plugin_ui_xputty_1.md"
+  - "2_06_simple_plugin_ui_xputty_2.md"
+  - "2_07_simple_plugin_ui_bwidgets.md"
