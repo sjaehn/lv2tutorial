@@ -1,2 +1,7 @@
-**/*.so
+build*/
+**/*.a
+**/*.d
 **/*.o
+**/*.so
+*.txt.user
+*.diff
