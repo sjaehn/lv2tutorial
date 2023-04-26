@@ -27,6 +27,7 @@ Programming tutorial series for creating LV2 plugins using C/C++ and turtle.
   - [04 - What's Sooo Bad About GTK?](#04---whats-sooo-bad-about-gtk)
   - [05 - Make A Simple Amp Plugin UI With XPutty](#05---make-a-simple-amp-plugin-ui-with-xputty)
   - [06 - Make A Simple Amp Plugin UI With XPutty II](#06---make-a-simple-amp-plugin-ui-with-xputty-ii)
+  - [07 - Make An Amp Plugin UI With B.Widgets](#07---make-an-amp-plugin-ui-with-bwidgets)
   
 - [Resources](#resources)
 - [Further reading](#further-reading)
@@ -485,6 +486,76 @@ Compile:
 
 Xputty: https://github.com/brummer10/libxputty
 Cairo: https://www.cairographics.org/manual/
+
+
+### 07 - Make An Amp Plugin UI With B.Widgets
+
+See video: Scheduled for Friday 2023-04-28, 14:00 CET
+
+Introduction into a new widget tookit designed for graphical user interfaces
+for music production: [B.Widgets](https://github.com/sjaehn/BWidgets). And
+create an UI for myAmp with this toolkit.
+
+Topics:
+* Start with myAmp_Xputty
+* Adapt the names and the URIs
+* Get B.Widgets from https://github.com/sjaehn/BWidgets using git:
+  ```
+  git submodule add https://github.com/sjaehn/BWidgets.git myAmp_BWidgets/BWidgets
+  git submodule update --init --recursive
+  ```
+* Build BWidgets
+  ```
+  cd BWidgets
+  make bwidgets
+  ```
+* UI header file
+  * Inherit the MyAmpUI class from `BWidgets::Window`
+  * Declare:
+    * `BWidgets::Dial dial`
+    * Constructor
+    * (Destructor)
+    * `getTopLevelWidget()`
+    * `portEvent()`
+    * `valueChangedCallback()`
+* UI cpp file
+  * Constructor
+    * Initialize parent class `BWidgets::Window`
+    * Initialize `dial`
+    * `setBackground()`
+    * dial
+      * `add()`
+      * `setClickable()`
+      * `setCallbackfunction()`
+  * `getTopLevelWidget()`
+    * Get widget from the pugl backend of B.Widgets using
+    `puglGetNativeView(getView())`
+  * `portEvent()`
+    * Set the dial value using `setValue()`
+  * `valueChangedCallback()`
+    * Get the event-emitting widget from the passed `BWidgets::Event* event` 
+    by `event->getWidget()`
+    * Get the main window from this widget using `getMainWindow()`
+    * Get the dial value using `getValue()`
+    * Pass the dial value to the host using LV2 `write_function()`
+  * Idle interface (`ui_idle()`)
+    * Call the `BWidgets::Window` event handler using `handleEvents()`
+* Compile (and link)
+  * DSP
+    ```
+    gcc myAmp.c -fvisibility=hidden -fPIC -DPIC -shared -pthread `pkg-config --cflags lv2` -Wl,-Bstatic `pkg-config --libs --static lv2` -Wl,-Bdynamic -lm -o myAmp.so
+    ```
+  * UI
+    ```
+    g++ -fPIC -DPIC -DPUGL_HAVE_CAIRO -fvisibility=hidden -std=c++17 -IBWidgets/include myAmp_BWidgets.cpp `pkg-config --cflags lv2 cairo x11` -c
+    g++ -shared -pthread -LBWidgets/build myAmp_BWidgets.o -lbwidgetscore -lcairoplus -lpugl `pkg-config --libs lv2 cairo x11` -o myAmp_BWidgets.so
+    ```
+  * Create a new folder inside your LV2 directory
+  * Copy all .so, .ttl, and .png files
+  * And run
+    ```
+    jalv.gtk3 https://github.com/sjaehn/lv2tutorial/myAmp_BWidgets
+    ```
 
 
 ## Resources
