@@ -490,7 +490,7 @@ Cairo: https://www.cairographics.org/manual/
 
 ### 07 - Make An Amp Plugin UI With B.Widgets
 
-See video: Scheduled for Friday 2023-04-28, 14:00 CET
+See video: https://youtu.be/1MP2Y1g6KCY
 
 Introduction into a new widget tookit designed for graphical user interfaces
 for music production: [B.Widgets](https://github.com/sjaehn/BWidgets). And
