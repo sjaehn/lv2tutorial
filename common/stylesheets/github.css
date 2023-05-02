@@ -1,0 +1,52 @@
+/* GitHub override style for MKDocs Material Theme (WIP) */
+
+/* Light mode */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #58a6ff; /* Header background (fg?) */
+  --md-default-fg-color: #24292f; /* Text foreground */
+  --md-default-bg-color: #ffffff; /* Main background */
+  --md-typeset-a-color:  #58a6ff; /* Link */
+  --md-accent-fg-color:  #58bbff; /* Link Hover */
+}
+/* Dark mode */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #58a6ff; /* Header background (fg?) */
+  --md-default-fg-color: #c9d1d9; /* Text foreground */
+  --md-default-bg-color: #0d1117; /* Main background */
+  --md-typeset-a-color:  #58a6ff; /* Link */
+  --md-accent-fg-color:  #58bbff; /* Link Hover */
+}
+.md-header {
+  background-color: #16171d;
+}
+.md-typeset .md-button--success {
+  color:               white;
+  border: 1px solid    #28a745;
+  border-radius:       .25rem;
+  background-color:    green;
+  --md-accent-fg-color:#28a745;
+}
+.md-typeset .md-button--warning {
+  border: 1px solid    orange;
+  color:               white;
+  border-radius:       .25rem;
+  background-color:    orange;
+  --md-accent-fg-color:#ffd000;
+}
+.badge {
+  background-color:#58a6ff;
+  color:           #fff;
+  border-radius:    .25rem;
+  display:          inline-block;
+  padding-left:     8px;
+  padding-right:    8px;
+  text-align:       center;
+  font-weight:      bold;
+}
+.badge-success {
+  background-color:green;
+}
+.badge-warning {
+  background-color:orange;
+  color:black;
+}
