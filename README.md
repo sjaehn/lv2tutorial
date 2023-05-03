@@ -23,6 +23,7 @@ Programming tutorial series for creating LV2 plugins using C/C++ and turtle.
 - [09 - Waveform Synth In C++ 11][01-09]
 - [10 - Performance & Polyphony][01-10]
 - [11 - Programming Realtime Audio][01-11]
+- [12 - Synthesis, Aliasing & PolyBLEP][01-12]
 
 ### Programming LV2 Plugins From Scratch II - User Interfaces
 
@@ -56,6 +57,7 @@ Programming tutorial series for creating LV2 plugins using C/C++ and turtle.
 [01-09]: docs/1_09_waveform_synth_cpp11.md
 [01-10]: docs/1_10_performance_polyphony.md
 [01-11]: docs/1_11_programming_rt_audio.md
+[01-12]: docs/1_12_synthesis_aliasing_polyblep.md
 
 [02-00]: docs/2_00_announce.md
 [02-01]: docs/2_01_lv2_ui_intro.md

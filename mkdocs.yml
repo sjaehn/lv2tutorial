@@ -71,6 +71,7 @@ nav:
   - "1_09_waveform_synth_cpp11.md"
   - "1_10_performance_polyphony.md"
   - "1_11_programming_rt_audio.md"
+  - "1_12_synthesis_aliasing_polyblep.md"
 - LV2 From Scratch II - UIs:
   - "2_00_announce.md"
   - "2_01_lv2_ui_intro.md"
