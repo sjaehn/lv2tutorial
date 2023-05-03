@@ -12,20 +12,20 @@
         <meta name="author" content="lv2tutorials team">
       
       
-        <link rel="canonical" href="https://lv2tutorials.github.io/1_10_performance_polyphony/">
+        <link rel="canonical" href="https://lv2tutorials.github.io/1_12_synthesis_aliasing_polyblep/">
       
       
-        <link rel="prev" href="../1_09_waveform_synth_cpp11/">
+        <link rel="prev" href="../1_11_programming_rt_audio/">
       
       
-        <link rel="next" href="../1_11_programming_rt_audio/">
+        <link rel="next" href="../2_00_announce/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.9">
     
     
       
-        <title>10 - Performance & Polyphony - lv2tutorials</title>
+        <title>12 - Synthesis, Aliasing & PolyBLEP - lv2tutorials</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#10-performance-polyphony" class="md-skip">
+        <a href="#12-synthesis-aliasing-polyblep" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              10 - Performance & Polyphony
+              12 - Synthesis, Aliasing & PolyBLEP
             
           </span>
         </div>
@@ -449,21 +449,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../1_10_performance_polyphony/" class="md-nav__link">
         10 - Performance & Polyphony
       </a>
-      
     </li>
   
 
@@ -487,11 +477,100 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../1_12_synthesis_aliasing_polyblep/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          12 - Synthesis, Aliasing & PolyBLEP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         12 - Synthesis, Aliasing & PolyBLEP
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#topics" class="md-nav__link">
+    Topics:
+  </a>
+  
+    <nav class="md-nav" aria-label="Topics:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-problem" class="md-nav__link">
+    The problem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-cause" class="md-nav__link">
+    The cause
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-fix" class="md-nav__link">
+    The fix
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-implementation" class="md-nav__link">
+    The implementation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compile" class="md-nav__link">
+    Compile:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test" class="md-nav__link">
+    Test:
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -670,6 +749,69 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#topics" class="md-nav__link">
+    Topics:
+  </a>
+  
+    <nav class="md-nav" aria-label="Topics:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-problem" class="md-nav__link">
+    The problem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-cause" class="md-nav__link">
+    The cause
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-fix" class="md-nav__link">
+    The fix
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-implementation" class="md-nav__link">
+    The implementation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compile" class="md-nav__link">
+    Compile:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test" class="md-nav__link">
+    Test:
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -683,7 +825,7 @@
                   
 
   
-    <a href="https://github.com/sjaehn/lv2tutorial/edit/master/docs/1_10_performance_polyphony.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/sjaehn/lv2tutorial/edit/master/docs/1_12_synthesis_aliasing_polyblep.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
     </a>
@@ -692,35 +834,83 @@
     
       
     
-    <a href="https://github.com/sjaehn/lv2tutorial/raw/master/docs/1_10_performance_polyphony.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/sjaehn/lv2tutorial/raw/master/docs/1_12_synthesis_aliasing_polyblep.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5Z"/></svg>
     </a>
   
 
 
-<h1 id="10-performance-polyphony">10 - Performance &amp; Polyphony<a class="headerlink" href="#10-performance-polyphony" title="Permanent link">🔗</a></h1>
-<p>See video: <a href="https://youtu.be/uelx7poEMNY">https://youtu.be/uelx7poEMNY</a></p>
-<p>In the previous videos, we created a simple monosynth. This time, we will enable
-polyphony by the use of key containers. This video also shows the features and
-the limitations of the C++ standard template library (STL). And this video also
-shows different ways of increasing the plugin performance.</p>
-<p>Topics</p>
+<h1 id="12-synthesis-aliasing-polyblep">12 - Synthesis, Aliasing &amp; PolyBLEP<a class="headerlink" href="#12-synthesis-aliasing-polyblep" title="Permanent link">🔗</a></h1>
+<p>See video: scheduled for May 05, 2023, 14:00 CET</p>
+<p>Get rid of nasty aliasing artifacts from sound synthesis. Especially for saw
+and square waves. This video describes the cause for aliasing in audio and
+how to fix it.</p>
+<p>Warning: This video may contain traces of mathematics.</p>
+<h2 id="topics">Topics:<a class="headerlink" href="#topics" title="Permanent link">🔗</a></h2>
+<h3 id="the-problem">The problem<a class="headerlink" href="#the-problem" title="Permanent link">🔗</a></h3>
 <ul>
-<li>Header files</li>
-<li>Polyphony using key as a std::array</li>
-<li>Alternative STL containers<ul>
-<li>std::vector</li>
-<li>std::map</li>
-<li>C++11 <code>for</code> loop</li>
-<li>Using interators</li>
-<li>Performance considerations</li>
-<li>Realtime compatibility</li>
+<li>Distorted sound for saw and square (and triangle) wave in
+  mySimplePolySynth</li>
+<li>Artifacts in the spectrogram</li>
+</ul>
+<h3 id="the-cause">The cause<a class="headerlink" href="#the-cause" title="Permanent link">🔗</a></h3>
+<ul>
+<li>Aliasing</li>
+<li>Nyquist frequency</li>
+</ul>
+<h3 id="the-fix">The fix<a class="headerlink" href="#the-fix" title="Permanent link">🔗</a></h3>
+<ul>
+<li>Fouries series synthesis</li>
+<li>Oversampling</li>
+<li>BLIT, BLEP, PolyBLEP<ul>
+<li>PolyBLEP (Polynomial BandLimited stEP)<ul>
+<li>Replace steps by a simple quadratic function</li>
+<li>Replace kinks by integration of PolyBLEP</li>
 </ul>
 </li>
-<li>BUtility::BMap</li>
-<li>Compiler flags (<code>-O3</code>, <code>-ffast-math</code>)</li>
 </ul>
+</li>
+</ul>
+<h3 id="the-implementation">The implementation<a class="headerlink" href="#the-implementation" title="Permanent link">🔗</a></h3>
+<ul>
+<li>Start with mySimplePolySynth</li>
+<li>Adapt the filenames and the URIs</li>
+<li>Add a <code>Key::polyBlep()</code> method</li>
+<li>Square wave:<ul>
+<li>Add polyBLEP at phase position 0</li>
+<li>Subtract polyBLEP at phase position 0.5</li>
+</ul>
+</li>
+<li>Saw wave:<ul>
+<li>Subtract polyBLEP at phase position 0</li>
+</ul>
+</li>
+<li>Triangle wave:<ul>
+<li>Add a <code>Key::integrateSquareWave()</code> method<ul>
+<li>Divide the square wave into six steps</li>
+<li>Step 1: Integrate polyBLEP using <code>Key::IntegrateF1()</code></li>
+<li>Step 2: Integration is a simple rectangle</li>
+<li>Step 3: Reversed step 1</li>
+<li>Steps 4-6: Minus steps 1-3</li>
+</ul>
+</li>
+<li>Replace triangle formula by <code>Key::integrateSquareWave()</code></li>
+<li>Scale and shift the triangle wave</li>
+</ul>
+</li>
+</ul>
+<h2 id="compile">Compile:<a class="headerlink" href="#compile" title="Permanent link">🔗</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>g++<span class="w"> </span>mySimplePolyBlepSynth.cpp<span class="w"> </span>-fvisibility<span class="o">=</span>hidden<span class="w"> </span>-fPIC<span class="w"> </span>-DPIC<span class="w"> </span>-O3<span class="w"> </span>-shared<span class="w"> </span>-pthread<span class="w"> </span><span class="sb">`</span>pkg-config<span class="w"> </span>--cflags<span class="w"> </span>lv2<span class="sb">`</span><span class="w"> </span>-Wl,-Bstatic<span class="w"> </span><span class="sb">`</span>pkg-config<span class="w"> </span>--libs<span class="w"> </span>--static<span class="w"> </span>lv2<span class="sb">`</span><span class="w"> </span>-Wl,-Bdynamic<span class="w"> </span>-lm<span class="w"> </span>-o<span class="w"> </span>mySimplePolyBlepSynth.so
+</code></pre></div>
+<h2 id="test">Test:<a class="headerlink" href="#test" title="Permanent link">🔗</a></h2>
+<ul>
+<li>Create a new folder inside your LV2 directory</li>
+<li>Copy all .so and .ttl files</li>
+<li>And run:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>jalv.gtk3<span class="w"> </span>https://github.com/sjaehn/lv2tutorial/mySimplePolyBlepSynth
+</code></pre></div>
 
 
 
@@ -742,7 +932,7 @@ shows different ways of increasing the plugin performance.</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../1_09_waveform_synth_cpp11/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 09 - Waveform Synth In C++ 11" rel="prev">
+          <a href="../1_11_programming_rt_audio/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 11 - Programming Realtime Audio" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -751,20 +941,20 @@ shows different ways of increasing the plugin performance.</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                09 - Waveform Synth In C++ 11
+                11 - Programming Realtime Audio
               </div>
             </div>
           </a>
         
         
           
-          <a href="../1_11_programming_rt_audio/" class="md-footer__link md-footer__link--next" aria-label="Next: 11 - Programming Realtime Audio" rel="next">
+          <a href="../2_00_announce/" class="md-footer__link md-footer__link--next" aria-label="Next: 00 - Announce II" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                11 - Programming Realtime Audio
+                00 - Announce II
               </div>
             </div>
             <div class="md-footer__button md-icon">
