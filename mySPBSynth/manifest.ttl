@@ -1,0 +1,11 @@
+@prefix lv2:  <http://lv2plug.in/ns/lv2core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ui:   <http://lv2plug.in/ns/extensions/ui#> .
+
+<https://github.com/sjaehn/lv2tutorial/mySPBSynth> a lv2:Plugin ;
+    lv2:binary <mySPBSynth.so> ;
+    rdfs:seeAlso <mySPBSynth.ttl> .
+
+<https://github.com/sjaehn/lv2tutorial/mySPBSynth#ui> a ui:X11UI ;
+    lv2:binary <mySPBSynth_ui.so> ;
+    rdfs:seeAlso <mySPBSynth.ttl> .

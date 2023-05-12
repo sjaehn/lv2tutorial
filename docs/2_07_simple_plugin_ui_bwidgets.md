@@ -8,6 +8,8 @@ create an UI for myAmp with this toolkit.
 
 ## Topics
 
+### Get started
+
 * Start with myAmp_Xputty
 * Adapt the names and the URIs
 * Get B.Widgets from <https://github.com/sjaehn/BWidgets> using git:
@@ -17,7 +19,7 @@ git submodule add https://github.com/sjaehn/BWidgets.git myAmp_BWidgets/BWidgets
 git submodule update --init --recursive
 ```
 
-## Build BWidgets
+### Build BWidgets
 
 ```sh
 cd BWidgets
@@ -28,7 +30,7 @@ make bwidgets
 
 * Inherit the MyAmpUI class from `BWidgets::Window`
 * Declare:
-    * `BWidgets::Dial dial`
+    * `BWidgets::ValueDial dial`
     * Constructor
     * (Destructor)
     * `getTopLevelWidget()`

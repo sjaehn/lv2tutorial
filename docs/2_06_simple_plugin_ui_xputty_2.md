@@ -18,7 +18,7 @@ gcc myAmp.c -fvisibility=hidden -fPIC -DPIC -shared -pthread `pkg-config --cflag
 g++ myAmp_Xputty.cpp -fvisibility=hidden -fPIC -DPIC -shared -pthread -Ilibxputty/libxputty/include `pkg-config --cflags lv2 cairo x11` -Llibxputty/libxputty -Wl,-Bstatic -lm `pkg-config --libs --static lv2` -Wl,-Bdynamic `pkg-config --libs cairo x11` -o myAmp_Xputty.so
 ```
 
-### Optimization
+## Optimization
 
 * Load background image: `widget_get_png_from_file ()`
 * Visualize it in an expose event callback:
