@@ -21,7 +21,7 @@
         <link rel="next" href="../2_07_simple_plugin_ui_bwidgets/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.9">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
     
     
       
@@ -667,15 +667,15 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#optimization" class="md-nav__link">
     Optimization
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -756,15 +756,15 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#optimization" class="md-nav__link">
     Optimization
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -809,7 +809,7 @@
 <h3 id="user-interface">User interface<a class="headerlink" href="#user-interface" title="Permanent link">🔗</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>g++<span class="w"> </span>myAmp_Xputty.cpp<span class="w"> </span>-fvisibility<span class="o">=</span>hidden<span class="w"> </span>-fPIC<span class="w"> </span>-DPIC<span class="w"> </span>-shared<span class="w"> </span>-pthread<span class="w"> </span>-Ilibxputty/libxputty/include<span class="w"> </span><span class="sb">`</span>pkg-config<span class="w"> </span>--cflags<span class="w"> </span>lv2<span class="w"> </span>cairo<span class="w"> </span>x11<span class="sb">`</span><span class="w"> </span>-Llibxputty/libxputty<span class="w"> </span>-Wl,-Bstatic<span class="w"> </span>-lm<span class="w"> </span><span class="sb">`</span>pkg-config<span class="w"> </span>--libs<span class="w"> </span>--static<span class="w"> </span>lv2<span class="sb">`</span><span class="w"> </span>-Wl,-Bdynamic<span class="w"> </span><span class="sb">`</span>pkg-config<span class="w"> </span>--libs<span class="w"> </span>cairo<span class="w"> </span>x11<span class="sb">`</span><span class="w"> </span>-o<span class="w"> </span>myAmp_Xputty.so
 </code></pre></div>
-<h3 id="optimization">Optimization<a class="headerlink" href="#optimization" title="Permanent link">🔗</a></h3>
+<h2 id="optimization">Optimization<a class="headerlink" href="#optimization" title="Permanent link">🔗</a></h2>
 <ul>
 <li>Load background image: <code>widget_get_png_from_file ()</code></li>
 <li>Visualize it in an expose event callback:<ul>

@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.9">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
     
     
       
@@ -662,15 +662,22 @@
     Topics
   </a>
   
+    <nav class="md-nav" aria-label="Topics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-started" class="md-nav__link">
+    Get started
+  </a>
+  
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#build-bwidgets" class="md-nav__link">
     Build BWidgets
   </a>
   
-    <nav class="md-nav" aria-label="Build BWidgets">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#ui-header-file" class="md-nav__link">
@@ -771,15 +778,22 @@
     Topics
   </a>
   
+    <nav class="md-nav" aria-label="Topics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-started" class="md-nav__link">
+    Get started
+  </a>
+  
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#build-bwidgets" class="md-nav__link">
     Build BWidgets
   </a>
   
-    <nav class="md-nav" aria-label="Build BWidgets">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#ui-header-file" class="md-nav__link">
@@ -871,6 +885,7 @@
 for music production: <a href="https://github.com/sjaehn/BWidgets">B.Widgets</a>. And
 create an UI for myAmp with this toolkit.</p>
 <h2 id="topics">Topics<a class="headerlink" href="#topics" title="Permanent link">🔗</a></h2>
+<h3 id="get-started">Get started<a class="headerlink" href="#get-started" title="Permanent link">🔗</a></h3>
 <ul>
 <li>Start with myAmp_Xputty</li>
 <li>Adapt the names and the URIs</li>
@@ -879,7 +894,7 @@ create an UI for myAmp with this toolkit.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>submodule<span class="w"> </span>add<span class="w"> </span>https://github.com/sjaehn/BWidgets.git<span class="w"> </span>myAmp_BWidgets/BWidgets
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>git<span class="w"> </span>submodule<span class="w"> </span>update<span class="w"> </span>--init<span class="w"> </span>--recursive
 </code></pre></div>
-<h2 id="build-bwidgets">Build BWidgets<a class="headerlink" href="#build-bwidgets" title="Permanent link">🔗</a></h2>
+<h3 id="build-bwidgets">Build BWidgets<a class="headerlink" href="#build-bwidgets" title="Permanent link">🔗</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>BWidgets
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>make<span class="w"> </span>bwidgets
 </code></pre></div>
@@ -887,7 +902,7 @@ create an UI for myAmp with this toolkit.</p>
 <ul>
 <li>Inherit the MyAmpUI class from <code>BWidgets::Window</code></li>
 <li>Declare:<ul>
-<li><code>BWidgets::Dial dial</code></li>
+<li><code>BWidgets::ValueDial dial</code></li>
 <li>Constructor</li>
 <li>(Destructor)</li>
 <li><code>getTopLevelWidget()</code></li>
