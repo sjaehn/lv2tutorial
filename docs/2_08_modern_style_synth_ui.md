@@ -1,6 +1,6 @@
 # 08 - Make A Modern Style Synth UI
 
-See video: Friday May 12, 2023 14:00 CET
+See video: https://youtu.be/q-SA6T48ux0
 
 Create a (just a bit more complex) graphical user interface for
 myPolyBlepSynth with dials, sliders, a combobox and an image surface to draw

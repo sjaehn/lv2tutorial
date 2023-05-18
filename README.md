@@ -36,6 +36,7 @@ Programming tutorial series for creating LV2 plugins using C/C++ and turtle.
 - [06 - Make A Simple Amp Plugin UI With XPutty II][02-06]
 - [07 - Make An Amp Plugin UI With B.Widgets][02-07]
 - [08 - Make A Modern Style Synth UI][02-08]
+- [09 - Make A Vintage Style Synth UI][02-09]
 
 [ continue writing from the above line and keep this commented lines
   and the reference links below at the end of this document,
@@ -68,3 +69,4 @@ Programming tutorial series for creating LV2 plugins using C/C++ and turtle.
 [02-06]: docs/2_06_simple_plugin_ui_xputty_2.md
 [02-07]: docs/2_07_simple_plugin_ui_bwidgets.md
 [02-08]: docs/2_08_modern_style_synth_ui.md
+[02-09]: docs/2_09_vintage_style_synth_ui.md
