@@ -7,3 +7,6 @@
 [submodule "mySPBSynth/BWidgets"]
 	path = mySPBSynth/BWidgets
 	url = https://github.com/sjaehn/BWidgets
+[submodule "mySPBSynth_vintage/BWidgets"]
+	path = mySPBSynth_vintage/BWidgets
+	url = https://github.com/sjaehn/BWidgets.git
