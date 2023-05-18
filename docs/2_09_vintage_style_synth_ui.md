@@ -64,7 +64,7 @@ BWidgets/examples/inc
 * run
 
     ```sh
-    jalv.gtk3 https://github.com/sjaehn/lv2tutorial/mySPBSynth
+    jalv.gtk3 https://github.com/sjaehn/lv2tutorial/mySPBSynth_vintage
     ```
 
 ## Piano
