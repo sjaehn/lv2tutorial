@@ -1,6 +1,6 @@
 # 09 - Make A Vintage Style Synth UI
 
-See video: Friday May 19, 2023 14:00 CET
+See video: https://youtu.be/QkzZO_6qcIE
 
 Create a vintage style graphical user interface based on image data for
 myPolyBlepSynth by modifying mySPBSynth. Using
