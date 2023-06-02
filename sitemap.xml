@@ -2,127 +2,127 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://lv2tutorials.github.io/</loc>
-         <lastmod>2023-05-18</lastmod>
+         <lastmod>2023-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lv2tutorials.github.io/1_00_announce/</loc>
-         <lastmod>2023-05-18</lastmod>
+         <lastmod>2023-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lv2tutorials.github.io/1_01_what_is_lv2/</loc>
-         <lastmod>2023-05-18</lastmod>
+         <lastmod>2023-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lv2tutorials.github.io/1_02_simple_amp_1/</loc>
-         <lastmod>2023-05-18</lastmod>
+         <lastmod>2023-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lv2tutorials.github.io/1_03_how_lv2_plugins_work/</loc>
-         <lastmod>2023-05-18</lastmod>
+         <lastmod>2023-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lv2tutorials.github.io/1_04_simple_amp_2/</loc>
-         <lastmod>2023-05-18</lastmod>
+         <lastmod>2023-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lv2tutorials.github.io/1_05_sound_gen_cpp/</loc>
-         <lastmod>2023-05-18</lastmod>
+         <lastmod>2023-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lv2tutorials.github.io/1_06_atom_urids_uris/</loc>
-         <lastmod>2023-05-18</lastmod>
+         <lastmod>2023-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lv2tutorials.github.io/1_07_simplest_midi_synth_1/</loc>
-         <lastmod>2023-05-18</lastmod>
+         <lastmod>2023-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lv2tutorials.github.io/1_08_simplest_midi_synth_2/</loc>
-         <lastmod>2023-05-18</lastmod>
+         <lastmod>2023-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lv2tutorials.github.io/1_09_waveform_synth_cpp11/</loc>
-         <lastmod>2023-05-18</lastmod>
+         <lastmod>2023-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lv2tutorials.github.io/1_10_performance_polyphony/</loc>
-         <lastmod>2023-05-18</lastmod>
+         <lastmod>2023-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lv2tutorials.github.io/1_11_programming_rt_audio/</loc>
-         <lastmod>2023-05-18</lastmod>
+         <lastmod>2023-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lv2tutorials.github.io/1_12_synthesis_aliasing_polyblep/</loc>
-         <lastmod>2023-05-18</lastmod>
+         <lastmod>2023-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lv2tutorials.github.io/2_00_announce/</loc>
-         <lastmod>2023-05-18</lastmod>
+         <lastmod>2023-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lv2tutorials.github.io/2_01_lv2_ui_intro/</loc>
-         <lastmod>2023-05-18</lastmod>
+         <lastmod>2023-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lv2tutorials.github.io/2_02_simple_plugin_ui_gtk_1/</loc>
-         <lastmod>2023-05-18</lastmod>
+         <lastmod>2023-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lv2tutorials.github.io/2_03_simple_plugin_ui_gtk_2/</loc>
-         <lastmod>2023-05-18</lastmod>
+         <lastmod>2023-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lv2tutorials.github.io/2_04_whats_so_bad_gtk/</loc>
-         <lastmod>2023-05-18</lastmod>
+         <lastmod>2023-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lv2tutorials.github.io/2_05_simple_plugin_ui_xputty_1/</loc>
-         <lastmod>2023-05-18</lastmod>
+         <lastmod>2023-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lv2tutorials.github.io/2_06_simple_plugin_ui_xputty_2/</loc>
-         <lastmod>2023-05-18</lastmod>
+         <lastmod>2023-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lv2tutorials.github.io/2_07_simple_plugin_ui_bwidgets/</loc>
-         <lastmod>2023-05-18</lastmod>
+         <lastmod>2023-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lv2tutorials.github.io/2_08_modern_style_synth_ui/</loc>
-         <lastmod>2023-05-18</lastmod>
+         <lastmod>2023-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lv2tutorials.github.io/2_09_vintage_style_synth_ui/</loc>
-         <lastmod>2023-05-18</lastmod>
+         <lastmod>2023-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lv2tutorials.github.io/build/</loc>
-         <lastmod>2023-05-18</lastmod>
+         <lastmod>2023-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
